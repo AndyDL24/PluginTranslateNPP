@@ -1,3 +1,19 @@
+// NppTranslate
+// Copyright (C) 2026 AndyD
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program. If not, see <https://www.gnu.org/licenses/>.
+
 #include "TranslateEngine.h"
 #include "Settings.h"
 #include "Localization.h"
@@ -27,27 +43,43 @@ PreparedTranslation TranslateEngine::translateCurrentSelections()
 		return prepared;
 	}
 
-	TranslateRequest req;
-	const PluginSettings& s = GetSettings();
-	req.sourceLang = s.sourceLangUtf8();
-	req.targetLang = s.targetLangUtf8();
-	req.texts.reserve(prepared.spans.size());
+	std::vector<std::string> texts;
+	texts.reserve(prepared.spans.size());
 	for (const auto& span : prepared.spans)
-		req.texts.push_back(span.textUtf8);
+		texts.push_back(span.textUtf8);
 
-	auto translator = makeTranslator();
-	TranslateResult result = translator->translate(req);
+	TranslateResult result = translateTexts(texts);
 	if (!result.ok)
 	{
-		prepared.error = result.error.empty()
-			? Localization::format(LocId::MsgTranslateFailed, translator->name())
-			: result.error;
+		prepared.error = result.error;
 		return prepared;
 	}
 
 	prepared.translations = std::move(result.translations);
 	prepared.ok = true;
 	return prepared;
+}
+
+TranslateResult TranslateEngine::translateTexts(const std::vector<std::string>& texts) const
+{
+	TranslateResult result;
+	if (texts.empty())
+	{
+		result.error = Localization::get(LocId::MsgNoText);
+		return result;
+	}
+
+	TranslateRequest req;
+	const PluginSettings& s = GetSettings();
+	req.sourceLang = s.sourceLangUtf8();
+	req.targetLang = s.targetLangUtf8();
+	req.texts = texts;
+
+	auto translator = makeTranslator();
+	result = translator->translate(req);
+	if (!result.ok && result.error.empty())
+		result.error = Localization::format(LocId::MsgTranslateFailed, translator->name());
+	return result;
 }
 
 bool TranslateEngine::apply(const PreparedTranslation& prepared) const

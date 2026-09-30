@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\CsvUtil.h" />
     <ClInclude Include="..\src\Dialogs.h" />
     <ClInclude Include="..\src\HttpClient.h" />
     <ClInclude Include="..\src\Localization.h" />

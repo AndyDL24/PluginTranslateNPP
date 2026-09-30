@@ -1,3 +1,19 @@
+// NppTranslate
+// Copyright (C) 2026 AndyD
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program. If not, see <https://www.gnu.org/licenses/>.
+
 #include "SelectionService.h"
 #include <algorithm>
 #include <windows.h>
@@ -7,6 +23,75 @@ HWND SelectionService::currentScintilla() const
 	int which = 0;
 	::SendMessage(_npp._nppHandle, NPPM_GETCURRENTSCINTILLA, 0, reinterpret_cast<LPARAM>(&which));
 	return (which == 0) ? _npp._scintillaMainHandle : _npp._scintillaSecondHandle;
+}
+
+int SelectionService::nonEmptySelectionCount() const
+{
+	HWND sci = currentScintilla();
+	const auto nSel = static_cast<int>(::SendMessage(sci, SCI_GETSELECTIONS, 0, 0));
+	int count = 0;
+	for (int i = 0; i < nSel; ++i)
+	{
+		const Sci_Position start = ::SendMessage(sci, SCI_GETSELECTIONNSTART, i, 0);
+		const Sci_Position end = ::SendMessage(sci, SCI_GETSELECTIONNEND, i, 0);
+		if (end > start)
+			++count;
+	}
+	return count;
+}
+
+void SelectionService::mainSelection(Sci_Position& start, Sci_Position& end) const
+{
+	HWND sci = currentScintilla();
+	start = ::SendMessage(sci, SCI_GETSELECTIONSTART, 0, 0);
+	end = ::SendMessage(sci, SCI_GETSELECTIONEND, 0, 0);
+}
+
+Sci_Position SelectionService::lineCount() const
+{
+	return ::SendMessage(currentScintilla(), SCI_GETLINECOUNT, 0, 0);
+}
+
+Sci_Position SelectionService::lineIndexFromPos(Sci_Position pos) const
+{
+	return ::SendMessage(currentScintilla(), SCI_LINEFROMPOSITION, pos, 0);
+}
+
+bool SelectionService::lineSpan(Sci_Position line, TextSpan& span) const
+{
+	HWND sci = currentScintilla();
+	span.start = ::SendMessage(sci, SCI_POSITIONFROMLINE, line, 0);
+	span.end = ::SendMessage(sci, SCI_GETLINEENDPOSITION, line, 0);
+	if (span.end < span.start)
+		return false;
+
+	const Sci_Position len = span.end - span.start;
+	span.textUtf8.assign(static_cast<size_t>(len) + 1, '\0');
+	if (len > 0)
+	{
+		Sci_TextRangeFull tr{};
+		tr.chrg.cpMin = span.start;
+		tr.chrg.cpMax = span.end;
+		tr.lpstrText = span.textUtf8.data();
+		::SendMessage(sci, SCI_GETTEXTRANGEFULL, 0, reinterpret_cast<LPARAM>(&tr));
+	}
+	span.textUtf8.resize(static_cast<size_t>(len));
+	return true;
+}
+
+bool SelectionService::replaceRange(Sci_Position start, Sci_Position end, const std::string& textUtf8) const
+{
+	HWND sci = currentScintilla();
+	::SendMessage(sci, SCI_BEGINUNDOACTION, 0, 0);
+	::SendMessage(sci, SCI_SETTARGETRANGE, start, end);
+	::SendMessage(sci, SCI_REPLACETARGET, static_cast<WPARAM>(-1), reinterpret_cast<LPARAM>(textUtf8.c_str()));
+	::SendMessage(sci, SCI_ENDUNDOACTION, 0, 0);
+	return true;
+}
+
+void SelectionService::selectRange(Sci_Position start, Sci_Position end) const
+{
+	::SendMessage(currentScintilla(), SCI_SETSEL, start, end);
 }
 
 std::vector<TextSpan> SelectionService::getSpansToTranslate() const

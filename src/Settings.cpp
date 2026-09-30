@@ -1,3 +1,19 @@
+// NppTranslate
+// Copyright (C) 2026 AndyD
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program. If not, see <https://www.gnu.org/licenses/>.
+
 #include "Settings.h"
 #include "Utf8Util.h"
 #include "npp/PluginInterface.h"
@@ -47,6 +63,7 @@ void PluginSettings::load()
 
 	const std::wstring ep = ReadIni(ini, L"deepl_endpoint", L"free");
 	deeplEndpoint = (ep == L"pro") ? DeepLEndpoint::Pro : DeepLEndpoint::Free;
+	csvColumn = ReadIni(ini, L"csv_column", L"");
 }
 
 void PluginSettings::save() const
@@ -59,6 +76,7 @@ void PluginSettings::save() const
 	::WritePrivateProfileStringW(L"Translate", L"deepl_api_key", deeplApiKey.c_str(), ini.c_str());
 	::WritePrivateProfileStringW(L"Translate", L"deepl_endpoint",
 		deeplEndpoint == DeepLEndpoint::Pro ? L"pro" : L"free", ini.c_str());
+	::WritePrivateProfileStringW(L"Translate", L"csv_column", csvColumn.c_str(), ini.c_str());
 }
 
 void PluginSettings::swapLanguages()
