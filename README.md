@@ -165,7 +165,7 @@ L’endpoint gratuito **non** è un’API ufficiale Google: può rate-limitare, 
 
 GPL compatibile (header Notepad++ / plugin demo). Il codice di NppTranslate è rilasciato sotto licenza GPL compatibile.
 
-### Supporto
+### Donazione
 
 Se desideri supportare il progetto puoi farlo qui: </br>
 </br>
