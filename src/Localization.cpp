@@ -40,8 +40,9 @@ namespace
 		L"DeepL API key:",
 		L"DeepL endpoint:",
 		L"Language codes: auto, it, en, de, fr, es, ...",
+		L"Phrases:",
 		L"Original:",
-		L"Translated:",
+		L"Translated (editable):",
 
 		L"OK",
 		L"Cancel",
@@ -100,8 +101,9 @@ namespace
 		L"DeepL API key:",
 		L"DeepL endpoint:",
 		L"Codici lingua: auto, it, en, de, fr, es, ...",
+		L"Frasi:",
 		L"Originale:",
-		L"Tradotto:",
+		L"Tradotto (modificabile):",
 
 		L"OK",
 		L"Annulla",

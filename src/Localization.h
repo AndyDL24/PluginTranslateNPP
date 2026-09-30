@@ -27,6 +27,7 @@ enum class LocId
 	LabelDeeplKey,
 	LabelDeeplEndpoint,
 	LabelLangCodesHint,
+	LabelPhrases,
 	LabelOriginal,
 	LabelTranslated,
 

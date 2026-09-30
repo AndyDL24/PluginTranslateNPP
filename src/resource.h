@@ -16,11 +16,13 @@
 #define IDC_STATIC_DEEPL_EP        1010
 #define IDC_STATIC_LANG_HINT       1011
 
+#define IDC_PREVIEW_LIST           1100
 #define IDC_PREVIEW_ORIGINAL       1101
 #define IDC_PREVIEW_TRANSLATED     1102
-#define IDC_STATIC_ORIGINAL        1103
-#define IDC_STATIC_TRANSLATED      1104
-#define IDC_BTN_APPLY              1105
-#define IDC_BTN_CANCEL             1106
+#define IDC_STATIC_PHRASES         1103
+#define IDC_STATIC_ORIGINAL        1104
+#define IDC_STATIC_TRANSLATED      1105
+#define IDC_BTN_APPLY              1106
+#define IDC_BTN_CANCEL             1107
 
 #define IDC_ABOUT_TEXT             1201
