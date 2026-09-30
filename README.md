@@ -83,6 +83,11 @@ The free endpoint is **not** an official Google API. It may rate-limit, change, 
 
 GPL-compatible (Notepad++ / plugin demo headers). NppTranslate is released under a GPL-compatible license.
 
+### Donation
+
+If you would like to support the project, you can do so here:</br>
+</br>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X2RKY9S)
 ---
 
 ## Italiano
