@@ -1,0 +1,28 @@
+## Build
+bin/
+bin64/
+arm64/
+Debug/
+Release/
+x64/
+Win32/
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+*.user
+*.suo
+*.ncb
+*.aps
+*.opendb
+*.VC.db
+.vs/
+
+## Reference clone
+_ref_plugindemo/
+
+## Local secrets / config
+*.ini
+.env
