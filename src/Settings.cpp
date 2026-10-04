@@ -1,4 +1,4 @@
-// NppTranslate
+// NppTranslator
 // Copyright (C) 2026 AndyD
 //
 // This program is free software: you can redistribute it and/or modify
@@ -30,7 +30,7 @@ namespace
 	{
 		wchar_t path[MAX_PATH] = {};
 		::SendMessage(nppData._nppHandle, NPPM_GETPLUGINSCONFIGDIR, MAX_PATH, reinterpret_cast<LPARAM>(path));
-		::PathAppendW(path, L"NppTranslate.ini");
+		::PathAppendW(path, L"NppTranslator.ini");
 		return path;
 	}
 

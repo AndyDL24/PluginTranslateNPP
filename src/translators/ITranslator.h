@@ -1,4 +1,4 @@
-// NppTranslate
+// NppTranslator
 // Copyright (C) 2026 AndyD
 //
 // This program is free software: you can redistribute it and/or modify

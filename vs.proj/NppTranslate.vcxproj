@@ -47,7 +47,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A7C4E2F1-9B3D-4E8A-91C2-6D5F0A1B2C3D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>NppTranslate</RootNamespace>
+    <RootNamespace>NppTranslator</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -67,7 +67,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <PropertyGroup>
-    <TargetName>NppTranslate</TargetName>
+    <TargetName>NppTranslator</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>

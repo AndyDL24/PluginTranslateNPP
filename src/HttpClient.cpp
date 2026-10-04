@@ -1,4 +1,4 @@
-// NppTranslate
+// NppTranslator
 // Copyright (C) 2026 AndyD
 //
 // This program is free software: you can redistribute it and/or modify
@@ -29,7 +29,7 @@ namespace
 	{
 		HttpResponse result;
 
-		HINTERNET hSession = ::WinHttpOpen(L"NppTranslate/1.0",
+		HINTERNET hSession = ::WinHttpOpen(L"NppTranslator/1.0",
 			WINHTTP_ACCESS_TYPE_DEFAULT_PROXY, WINHTTP_NO_PROXY_NAME, WINHTTP_NO_PROXY_BYPASS, 0);
 		if (!hSession)
 		{

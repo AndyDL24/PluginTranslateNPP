@@ -1,4 +1,4 @@
-// NppTranslate
+// NppTranslator
 // Copyright (C) 2026 AndyD
 //
 // This program is free software: you can redistribute it and/or modify
@@ -33,12 +33,12 @@ namespace
 
 	void showError(const std::wstring& msg)
 	{
-		::MessageBoxW(nppData._nppHandle, msg.c_str(), L"NppTranslate", MB_OK | MB_ICONWARNING);
+		::MessageBoxW(nppData._nppHandle, msg.c_str(), L"NppTranslator", MB_OK | MB_ICONWARNING);
 	}
 
 	void showInfo(const std::wstring& msg)
 	{
-		::MessageBoxW(nppData._nppHandle, msg.c_str(), L"NppTranslate", MB_OK | MB_ICONINFORMATION);
+		::MessageBoxW(nppData._nppHandle, msg.c_str(), L"NppTranslator", MB_OK | MB_ICONINFORMATION);
 	}
 
 	void applyLocalizedMenuLabels()
@@ -298,7 +298,7 @@ void translateIntoColumn()
 	if (!result.ok || result.translations.empty())
 	{
 		showError(result.error.empty()
-			? Localization::format(LocId::MsgTranslateFailed, L"NppTranslate")
+			? Localization::format(LocId::MsgTranslateFailed, L"NppTranslator")
 			: result.error);
 		return;
 	}

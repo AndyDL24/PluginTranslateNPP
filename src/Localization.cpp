@@ -1,4 +1,4 @@
-// NppTranslate
+// NppTranslator
 // Copyright (C) 2026 AndyD
 //
 // This program is free software: you can redistribute it and/or modify
@@ -46,9 +46,9 @@ namespace
 		L"Settings...",
 		L"About",
 
-		L"NppTranslate - Settings",
-		L"NppTranslate - Preview",
-		L"NppTranslate - About",
+		L"NppTranslator - Settings",
+		L"NppTranslator - Preview",
+		L"NppTranslator - About",
 
 		L"Provider:",
 		L"Source language:",
@@ -69,7 +69,7 @@ namespace
 		L"Free (api-free.deepl.com)",
 		L"Pro (api.deepl.com)",
 
-		L"NppTranslate 1.0\r\n"
+		L"NppTranslator 1.0\r\n"
 		L"Created by AndyD\r\n\r\n"
 		L"Translates multiple selections in Notepad++.\r\n"
 		L"Default provider: Google Free (unofficial endpoint, no API key).\r\n"
@@ -96,7 +96,7 @@ namespace
 		L"Google requested a captcha / blocked this IP. Use DeepL in Settings.",
 		L"Invalid or empty Google Free response.",
 
-		L"DeepL API key is missing. Set it under Plugins → NppTranslate → Settings.",
+		L"DeepL API key is missing. Set it under Plugins → NppTranslator → Settings.",
 		L"DeepL rejected the API key (HTTP 403). Check the key and Free/Pro endpoint.",
 		L"DeepL quota exceeded (HTTP 456).",
 		L"DeepL returned HTTP %1",
@@ -105,7 +105,7 @@ namespace
 		L"Translate into column",
 		L"CSV column:",
 		L"Name (it) or number (3). Empty uses the target-language header.",
-		L"NppTranslate - CSV column",
+		L"NppTranslator - CSV column",
 		L"Select one cell or one line. Multiple selections stay on Translate and replace.",
 		L"Select a single cell, or the whole line when the header names the source column.",
 		L"The first line is the header. Move to a data row.",
@@ -121,9 +121,9 @@ namespace
 		L"Impostazioni...",
 		L"About",
 
-		L"NppTranslate - Impostazioni",
-		L"NppTranslate - Anteprima",
-		L"NppTranslate - About",
+		L"NppTranslator - Impostazioni",
+		L"NppTranslator - Anteprima",
+		L"NppTranslator - About",
 
 		L"Provider:",
 		L"Lingua sorgente:",
@@ -144,7 +144,7 @@ namespace
 		L"Free (api-free.deepl.com)",
 		L"Pro (api.deepl.com)",
 
-		L"NppTranslate 1.0\r\n"
+		L"NppTranslator 1.0\r\n"
 		L"Creato da AndyD\r\n\r\n"
 		L"Traduce selezioni multiple in Notepad++.\r\n"
 		L"Provider default: Google Free (endpoint non ufficiale, senza chiave).\r\n"
@@ -171,7 +171,7 @@ namespace
 		L"Google ha richiesto un captcha / ha bloccato l'IP. Usa DeepL nelle Impostazioni.",
 		L"Risposta Google Free non valida o vuota.",
 
-		L"Chiave API DeepL mancante. Impostala da Plugins → NppTranslate → Impostazioni.",
+		L"Chiave API DeepL mancante. Impostala da Plugins → NppTranslator → Impostazioni.",
 		L"DeepL ha rifiutato la chiave API (HTTP 403). Controlla chiave ed endpoint Free/Pro.",
 		L"Quota DeepL esaurita (HTTP 456).",
 		L"DeepL ha restituito HTTP %1",
@@ -180,7 +180,7 @@ namespace
 		L"Traduci nella colonna",
 		L"Colonna CSV:",
 		L"Nome (it) o numero (3). Vuoto = intestazione della lingua di destinazione.",
-		L"NppTranslate - Colonna CSV",
+		L"NppTranslator - Colonna CSV",
 		L"Seleziona una sola cella o una sola riga. Con più selezioni usa Traduci e sostituisci.",
 		L"Seleziona una sola cella, oppure l'intera riga se l'intestazione indica la colonna sorgente.",
 		L"La prima riga è l'intestazione. Vai su una riga di dati.",

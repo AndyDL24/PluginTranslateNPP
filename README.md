@@ -1,4 +1,4 @@
-# NppTranslate
+# NppTranslator
 
 **Language / Lingua:** [English](#english) · [Italiano](#italiano)
 
@@ -66,24 +66,24 @@ In **Preview translation…**:
 
 ### Build
 
-1. Open `NppTranslate.sln`
+1. Open `NppTranslator.sln`
 2. Select **Release | x64**
-3. Build → output: `bin64\NppTranslate.dll`
+3. Build → output: `bin64\NppTranslator.dll`
 
 ### Installation
 
 1. Close Notepad++
 2. Create a plugin folder, for example:
-   - `C:\Program Files\Notepad++\plugins\NppTranslate\`
-   - or `%LOCALAPPDATA%\Notepad++\plugins\NppTranslate\` (portable / no admin)
-3. Copy `NppTranslate.dll` into that folder
-4. Restart Notepad++ → **Plugins → NppTranslate**
+   - `C:\Program Files\Notepad++\plugins\NppTranslator\`
+   - or `%LOCALAPPDATA%\Notepad++\plugins\NppTranslator\` (portable / no admin)
+3. Copy `NppTranslator.dll` into that folder
+4. Restart Notepad++ → **Plugins → NppTranslator**
 
 ### Configuration
 
 INI path:
 
-`%APPDATA%\Notepad++\plugins\config\NppTranslate.ini`
+`%APPDATA%\Notepad++\plugins\config\NppTranslator.ini`
 
 Example:
 
@@ -107,7 +107,7 @@ The free endpoint is **not** an official Google API. It may rate-limit, change, 
 
 ### License
 
-NppTranslate is released under the [GNU General Public License v3.0](license.txt), or any later version. The Notepad++ headers in `src/npp` stay under their own copyright and the same GPL-3 terms.
+NppTranslator is released under the [GNU General Public License v3.0](license.txt), or any later version. The Notepad++ headers in `src/npp` stay under their own copyright and the same GPL-3 terms.
 
 ### Donation
 
@@ -174,24 +174,24 @@ In **Anteprima traduzione…**:
 
 ### Build
 
-1. Apri `NppTranslate.sln`
+1. Apri `NppTranslator.sln`
 2. Seleziona **Release | x64**
-3. Build → output: `bin64\NppTranslate.dll`
+3. Build → output: `bin64\NppTranslator.dll`
 
 ### Installazione
 
 1. Chiudi Notepad++
 2. Crea la cartella plugin, ad esempio:
-   - `C:\Program Files\Notepad++\plugins\NppTranslate\`
-   - oppure `%LOCALAPPDATA%\Notepad++\plugins\NppTranslate\` (portabile / senza admin)
-3. Copia `NppTranslate.dll` dentro quella cartella
-4. Riavvia Notepad++ → **Plugins → NppTranslate**
+   - `C:\Program Files\Notepad++\plugins\NppTranslator\`
+   - oppure `%LOCALAPPDATA%\Notepad++\plugins\NppTranslator\` (portabile / senza admin)
+3. Copia `NppTranslator.dll` dentro quella cartella
+4. Riavvia Notepad++ → **Plugins → NppTranslator**
 
 ### Configurazione
 
 Percorso INI:
 
-`%APPDATA%\Notepad++\plugins\config\NppTranslate.ini`
+`%APPDATA%\Notepad++\plugins\config\NppTranslator.ini`
 
 Esempio:
 
@@ -215,7 +215,7 @@ L’endpoint gratuito **non** è un’API ufficiale Google: può rate-limitare, 
 
 ### Licenza
 
-NppTranslate è rilasciato sotto la [GNU General Public License v3.0](license.txt), o qualsiasi versione successiva. Gli header di Notepad++ in `src/npp` restano sotto il loro copyright e gli stessi termini GPL-3.
+NppTranslator è rilasciato sotto la [GNU General Public License v3.0](license.txt), o qualsiasi versione successiva. Gli header di Notepad++ in `src/npp` restano sotto il loro copyright e gli stessi termini GPL-3.
 
 ### Donazione
 

@@ -1,4 +1,4 @@
-// NppTranslate
+// NppTranslator
 // Copyright (C) 2026 AndyD
 //
 // This program is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@
 
 IDD_SETTINGS_DLG DIALOGEX 0, 0, 320, 206
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "NppTranslate - Settings"
+CAPTION "NppTranslator - Settings"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     LTEXT           "Provider:",IDC_STATIC_PROVIDER,12,14,50,10
@@ -46,7 +46,7 @@ END
 
 IDD_PREVIEW_DLG DIALOGEX 0, 0, 500, 300
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "NppTranslate - Preview"
+CAPTION "NppTranslator - Preview"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     LTEXT           "Phrases:",IDC_STATIC_PHRASES,12,10,120,10
@@ -61,7 +61,7 @@ END
 
 IDD_ABOUT_DLG DIALOGEX 0, 0, 320, 220
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "NppTranslate - About"
+CAPTION "NppTranslator - About"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     EDITTEXT        IDC_ABOUT_TEXT,12,8,296,118,ES_MULTILINE | ES_READONLY | ES_AUTOVSCROLL | WS_VSCROLL | WS_BORDER
@@ -85,12 +85,12 @@ BEGIN
         BLOCK "040904B0"
         BEGIN
             VALUE "CompanyName", "AndyD"
-            VALUE "FileDescription", "NppTranslate"
+            VALUE "FileDescription", "NppTranslator"
             VALUE "FileVersion", "1.0.0.0"
-            VALUE "InternalName", "NppTranslate.dll"
+            VALUE "InternalName", "NppTranslator.dll"
             VALUE "LegalCopyright", "Copyright (C) 2026 AndyD"
-            VALUE "OriginalFilename", "NppTranslate.dll"
-            VALUE "ProductName", "NppTranslate"
+            VALUE "OriginalFilename", "NppTranslator.dll"
+            VALUE "ProductName", "NppTranslator"
             VALUE "ProductVersion", "1.0.0.0"
         END
     END
@@ -102,7 +102,7 @@ END
 
 IDD_CSV_COLUMN_DLG DIALOGEX 0, 0, 280, 92
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "NppTranslate - CSV column"
+CAPTION "NppTranslator - CSV column"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     LTEXT           "CSV column:",IDC_STATIC_CSV_COLUMN,12,12,256,10

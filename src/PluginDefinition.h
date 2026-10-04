@@ -1,4 +1,4 @@
-// NppTranslate
+// NppTranslator
 // Copyright (C) 2026 AndyD
 //
 // This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 
 #include "npp/PluginInterface.h"
 
-const wchar_t NPP_PLUGIN_NAME[] = L"NppTranslate";
+const wchar_t NPP_PLUGIN_NAME[] = L"NppTranslator";
 
 const int nbFunc = 7;
 
