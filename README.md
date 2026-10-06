@@ -66,9 +66,9 @@ In **Preview translation…**:
 
 ### Build
 
-1. Open `NppTranslator.sln`
+1. Open `NppTranslate.sln` (the project inside is named NppTranslator)
 2. Select **Release | x64**
-3. Build → output: `bin64\NppTranslator.dll`
+3. Build → output: `x64\Release\NppTranslator.dll`
 
 ### Installation
 
@@ -174,9 +174,9 @@ In **Anteprima traduzione…**:
 
 ### Build
 
-1. Apri `NppTranslator.sln`
+1. Apri `NppTranslate.sln` (il progetto dentro si chiama NppTranslator)
 2. Seleziona **Release | x64**
-3. Build → output: `bin64\NppTranslator.dll`
+3. Build → output: `x64\Release\NppTranslator.dll`
 
 ### Installazione
 
