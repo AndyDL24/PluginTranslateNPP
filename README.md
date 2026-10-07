@@ -2,7 +2,7 @@
 
 **Language / Lingua:** [English](#english) · [Italiano](#italiano)
 
-Notepad++ plugin (x64) for translating selected text — including **multiple selections** — with Google Free and DeepL.
+Notepad++ plugin (x86, x64, and ARM64) for translating selected text — including **multiple selections** — with Google Free and DeepL.
 
 Created by **AndyD**.
 
@@ -72,11 +72,19 @@ In **Preview translation…**:
 
 ### Installation
 
+Download the zip that matches your Notepad++ edition from the [1.0.0 release](https://github.com/AndyDL24/PluginTranslateNPP/releases/tag/1.0.0):
+
+- `NppTranslator_1.0.0_x64.zip`
+- `NppTranslator_1.0.0_Win32.zip`
+- `NppTranslator_1.0.0_ARM64.zip`
+
+Each zip contains `NppTranslator.dll` at the top level.
+
 1. Close Notepad++
 2. Create a plugin folder, for example:
    - `C:\Program Files\Notepad++\plugins\NppTranslator\`
    - or `%LOCALAPPDATA%\Notepad++\plugins\NppTranslator\` (portable / no admin)
-3. Copy `NppTranslator.dll` into that folder
+3. Copy `NppTranslator.dll` into that folder. The folder name must be `NppTranslator`
 4. Restart Notepad++ → **Plugins → NppTranslator**
 
 ### Configuration
@@ -180,11 +188,19 @@ In **Anteprima traduzione…**:
 
 ### Installazione
 
+Scarica lo zip dell’edizione di Notepad++ che usi, dalla [release 1.0.0](https://github.com/AndyDL24/PluginTranslateNPP/releases/tag/1.0.0):
+
+- `NppTranslator_1.0.0_x64.zip`
+- `NppTranslator_1.0.0_Win32.zip`
+- `NppTranslator_1.0.0_ARM64.zip`
+
+Ogni zip contiene `NppTranslator.dll` al primo livello.
+
 1. Chiudi Notepad++
 2. Crea la cartella plugin, ad esempio:
    - `C:\Program Files\Notepad++\plugins\NppTranslator\`
    - oppure `%LOCALAPPDATA%\Notepad++\plugins\NppTranslator\` (portabile / senza admin)
-3. Copia `NppTranslator.dll` dentro quella cartella
+3. Copia `NppTranslator.dll` dentro quella cartella. Il nome della cartella deve essere `NppTranslator`
 4. Riavvia Notepad++ → **Plugins → NppTranslator**
 
 ### Configurazione
